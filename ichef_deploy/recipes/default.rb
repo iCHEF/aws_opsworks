@@ -1,7 +1,7 @@
 bash 'install_something' do
-  cwd '/home/deploy/'
+  user 'ec2-user'
+  cwd '/home/ichef2/'
   code <<-EOH
-  mkdir bagayalo
-  git clone git@github.com:iCHEF/aws_opsworks.git bushit
+  git pull
   EOH
 end
