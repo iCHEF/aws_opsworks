@@ -8,3 +8,7 @@ bash 'install_something' do
   git pull
   EOH
 end
+
+service "uwsgi" do
+  action :restart
+end
