@@ -1,9 +1,6 @@
 bash 'install_something' do
-  user 'ec2-user'
-  cwd '/ichef2'
   code <<-EOH
-  eval "$(ssh-agent -s)"
-  ssh-add ~/.ssh/github_rsa
-  git pull
+  mkdir bagayalo
+  git clone git@github.com:iCHEF/aws_opsworks.git bushit
   EOH
 end
